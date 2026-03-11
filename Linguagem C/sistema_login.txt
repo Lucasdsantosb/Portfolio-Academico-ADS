@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    char usuario[20];
+    int senha;
+    int opcao;
+
+    printf("Aluno: Lucas dos Santos Bezerra\n");
+    printf("Matricula: 0023304\n");
+    printf("Aluno: Everton Gabriel Cunha de Oliveira\n");
+    printf("Matricula:0023937\n");
+
+    printf("Bem-Vindo(a) Usuario, Digite seu login e senha.\n");
+
+    printf("login:\n");
+    scanf("%s", usuario);
+
+    printf("senha:\n");
+    scanf("%d", &senha);
+    
+    //LOGIN ADMIN
+    if(strcmp(usuario, "admin") == 0 && senha == 1234){
+        printf("\nMenu Administrador\n");
+        printf("1 - Ver relátorio\n");
+        printf("2 - Cadastrar aluno\n");
+        printf("3 - Sair\n");
+        
+        scanf("%d", &opcao);
+        
+        switch(opcao){
+            case 1:
+            printf("Mostrando relatorio...\n");
+            break;
+            
+            case 2:
+            printf("Cadastrando usuario...\n");
+            break;
+            
+            case 3:
+            printf("Saindo...");
+            break;
+            
+            default:
+            printf("Opção invalida");
+        }
+    }
+// LOGIN ALUNO
+    else if(strcmp(usuario,"aluno") == 0 && senha == 2024){
+
+        printf("\nMenu Estudante\n");
+        printf("1 - Ver notas\n");
+        printf("2 - Ver horários\n");
+        printf("3 - Sair\n");
+
+        scanf("%d",&opcao);
+
+        switch(opcao){
+            case 1:
+                printf("Mostrando notas...\n");
+                break;
+
+            case 2:
+                printf("Mostrando horario...\n");
+                break;
+
+            case 3:
+                printf("Saindo...\n");
+                break;
+
+            default:
+                printf("Opcao invalida\n");
+        }
+    }
+
+    else{
+        printf("Usuario ou senha incorretos\n");
+    }
+    return 0;
+}

@@ -1,0 +1,118 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    printf("*************************************************\n");
+    printf("****Sistema de Menu de Restaurante***************\n");
+    printf("****Aluno: Everton Gabriel Cunha de Oliveira*****\n");
+    printf("****Usuário: 0023937*****************************\n");
+    printf("****Aluno: Lucas dos Santos Bezerra**************\n");
+    printf("****Usuário: 0023304*****************************\n");
+    
+    // Variaveis
+    float valor_produto,valor_desconto,valor_total;
+    int produto,quantidade,desconto;
+    
+    //Sistema de menu de Restaurante
+    printf("Menu Incial Pará Lanches\n");
+    printf("1 - Hamburguer -> R$18,00\n");
+    printf("2 - Pizza -> R$30,00\n");
+    printf("3 - Salada -> R$12,00\n");
+    printf("4 - Refrigerante -> R$6,00\n");
+    printf("Escolha seu pedido: \n");
+    scanf("%d",&produto);
+    
+    //Estrutura switch case
+    switch(produto){
+        case 1:
+            printf("Hamburguer -> R$18,00\n");
+            printf("Digite a quantidade: \n");
+            scanf("%d",&quantidade);
+            valor_produto = 18;
+            valor_total = valor_produto * quantidade;
+            if(valor_total > 50){
+                desconto = 10;
+                valor_desconto = valor_total * 0.10;
+            } else if(valor_total > 100){
+                desconto = 15;
+                valor_desconto = valor_total * 0.15;
+            } else {
+                desconto = 0;
+                valor_desconto = valor_total;
+            }
+            printf("Total: %.2f\n", valor_total);
+            printf("Desconto: R$%d%\n",desconto);
+            printf("Valor final: R$%.2f\n",valor_desconto);
+            break;
+            
+        case 2:
+            printf("Pizza -> R$30,00\n");
+            printf("Digite a quantidade: \n");
+            scanf("%d",&quantidade);
+            valor_produto = 30;
+            valor_total = valor_produto * quantidade;
+            if(valor_total > 50){
+                desconto = 10;
+                valor_desconto = valor_total * 0.10;
+            } else if(valor_total > 100){
+                desconto = 15;
+                valor_desconto = valor_total * 0.15;
+            }else {
+                desconto = 0;
+                valor_desconto = valor_total;
+            }
+            printf("Total: R$%.2f\n", valor_total);
+            printf("Desconto: %d%\n",desconto);
+            printf("Valor final: R$%.2f\n",valor_desconto);
+            break;
+            
+        case 3:
+            printf("Salada -> R$12,00\n");
+            printf("Digite a quantidade: \n");
+            scanf("%d",&quantidade);
+            valor_produto = 12;
+            valor_total = valor_produto * quantidade;
+            if(valor_total > 50){
+                desconto = 10;
+                valor_desconto = valor_total * 0.10;
+            } else if(valor_total > 100){
+                desconto = 15;
+                valor_desconto = valor_total * 0.15;
+            }else {
+                desconto = 0;
+                valor_desconto = valor_total;
+            }
+            printf("Total: R$%.2f\n", valor_total);
+            printf("Desconto: %d%\n",desconto);
+            printf("Valor finalo: R$%.2f\n",valor_desconto);
+            break;
+        
+        case 4:
+            printf("Refrigerante -> R$6,00\n");
+            printf("Digite a quantidade: \n");
+            scanf("%d",&quantidade);
+            valor_produto = 6;
+            valor_total = valor_produto * quantidade;
+            if(valor_total > 50){
+                desconto = 10;
+                valor_desconto = valor_total * 0.10;
+            } else if(valor_total > 100){
+                desconto = 15;
+                valor_desconto = valor_total * 0.15;
+            }else {
+                desconto = 0;
+                valor_desconto = valor_total;
+            }
+            printf("Total: R$%.2f\n", valor_total);
+            printf("Desconto: %d%\n",desconto);
+            printf("Valor final: R$%.2f\n",valor_desconto);
+            break;
+            
+        default:
+            printf("Inválido!");
+            
+    
+    return 0;
+    }
+}
